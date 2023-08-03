@@ -35,12 +35,15 @@ class Solver {
             }
         }
 
-        // pre-print board
-        printBoard(grid);
-        
-        
+        printBoard(grid); // show unsolved sudoku board
+        backtrackingSolver(grid); // solve the sudoku board
+        printBoard(grid); // show solved sudoku board
 
     } // end of main()
+
+    static void backtrackingSolver(int[][] grid) {
+        // TODO
+    }
 
     static void printBoard(final int[][] grid) {
         for(int height = 0; height<grid.length; height++) {

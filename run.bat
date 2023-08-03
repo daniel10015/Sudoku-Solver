@@ -1,4 +1,4 @@
-: run.sh
+: run.sh <custom>
 : FOR JAVA
 : compiles then runs the Solver.java (requires a Board.txt in cd)
 :  -- Color Codes -- (Syntax: "Color {color_code(background)color_code{text}}")
@@ -12,6 +12,5 @@
 
 echo Running Sudoku Solver...
 
-
 javac Solver.java
-java Solver
+java Solver %1
