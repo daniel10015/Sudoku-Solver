@@ -1,5 +1,9 @@
+// usage: Java Solver <custom>
+// arg1 (custom): uses 9x9 board in "Board.txt" (must be in cd)
+
 import java.io.*;
 import java.util.*;
+import java.lang.Math;
 
 class Solver {
     public static void main(String[] args) throws IOException {
@@ -14,7 +18,19 @@ class Solver {
         if(generate)
         {
             System.out.println("Generating...");
+            int temp_num;
             // TODO: generate 9x9 sudoku board (easy)
+            for(int i=0; i<grid.length; i++) {
+                for(int j=0; j<grid[0].length; j++) {
+                    temp_num = (int)(Math.random()*10);
+                    if(Math.random() > 0.45 && doChecks(grid, i, j, temp_num)) {
+                        grid[i][j] = temp_num;
+                    }
+                    else {
+                        grid[i][j] = 0;
+                    }
+                }
+            }
         }
         else {
             String line;
