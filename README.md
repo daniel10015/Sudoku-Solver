@@ -9,5 +9,5 @@
 - Requires JVM to run 'Sudoku.class' (java bytecode)
 ### For Compilation:
 1. In terminal run
-- Linux: 'chmod +x run.sh' then './run.sh'
+- Linux: 'chmod +x run.sh' then 'run'
 - Windows: 'run' 
